@@ -1,0 +1,103 @@
+#example {
+  width: 1000px;
+  height: 307px;
+  position: relative;
+  padding: 0px;
+  margin: 0px;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 60%;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+}
+#example p {
+  margin: 0;
+  padding: 0;
+}
+#slides {
+  position: absolute;
+  z-index: 10;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+}
+
+/*
+	Slides container
+	Important:
+	Set the width of your slides container
+	Set to display none, prevents content flash
+*/
+
+.slides_container {
+  width: 1000px;
+  height: 307px;
+  overflow: hidden;
+  position: relative;
+  display: none;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+}
+
+/*
+	Each slide
+	Important:
+	Set the width of your slides
+	If height not specified height will be set by the slide content
+	Set to display block
+*/
+
+.slides_container div.slide {
+  width: 1000px;
+  height: 307px;
+  display: block;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+}
+
+/*
+	Caption
+*/
+
+.caption {
+  z-index: 500;
+  position: absolute;
+  bottom: -35px;
+  left: 0;
+  height: 30px;
+  padding: 10px 20px 0 20px;
+  background: #000;
+  background: rgba(0, 0, 0, 0.5);
+  width: 1000px;
+  font-size: 1.3em;
+  line-height: 1.33;
+  color: #fff;
+  display: none;
+  border-top: 1px solid #000;
+  text-shadow: none;
+}
+
+.pagination {
+  margin: 10px auto 0 auto;
+  width: 100px;
+  display: none;
+}
+
+.pagination li {
+  float: left;
+  margin: 0 1px;
+  list-style: none;
+}
+
+.pagination li a {
+  display: block;
+  width: 12px;
+  height: 0;
+  padding-top: 12px;
+  background-image: url(banner/pagination.png);
+  background-position: 0 0;
+  float: left;
+  overflow: hidden;
+}
+
+.pagination li.current a {
+  background-position: 0 -12px;
+}
